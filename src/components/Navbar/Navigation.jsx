@@ -9,7 +9,7 @@ const Navigarion = () => {
   ];
 
   return (
-    <Navbar>
+    <Navbar variant="sticky">
       <Navbar.Brand>
         <Link href="#">
           <Text b>Jaguarem do ślubu</Text>
