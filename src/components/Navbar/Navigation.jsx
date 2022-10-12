@@ -9,7 +9,7 @@ const Navigarion = () => {
   ];
 
   return (
-    <Navbar variant="sticky">
+    <Navbar variant="sticky" maxWidth={"xl"}>
       <Navbar.Brand>
         <Link href="#">
           <Text b>Jaguarem do ślubu</Text>
@@ -33,13 +33,14 @@ const Navigarion = () => {
       <Navbar.Collapse>
         {menuOptions.map((item) => {
           return (
-            <Navbar.CollapseItem>
+            <Navbar.CollapseItem key={item.href+item.text}>
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
                 href={item.href}
+                
               >
                 {item.text}
               </Link>
