@@ -9,28 +9,28 @@ const Gallery = () => {
     >
       <Text h2>Galeria</Text>
       <Grid.Container>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
+          <Image src="https://picsum.photos/1239/920/?blur" />
+        </Grid>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
-        <Grid xs={12} sm={6} md={3}>
-          <Image src="https://picsum.photos/1240/920/?blur" />
-        </Grid>
-        <Grid xs={12} sm={6} md={3}>
+        <Grid xs={6} sm={3} md={3}>
           <Image src="https://picsum.photos/1240/920/?blur" />
         </Grid>
       </Grid.Container>

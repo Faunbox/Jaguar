@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Footer from "./components/Footer/Footer";
 import Navigarion from "./components/Navbar/Navigation";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
@@ -15,6 +16,7 @@ function App() {
       <Gallery />
       <Contact />
       <Suspense />
+      <Footer />
     </>
   );
 }
