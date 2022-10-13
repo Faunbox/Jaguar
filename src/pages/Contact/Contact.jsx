@@ -18,7 +18,7 @@ const Contact = () => {
       alignItems="center"
       direction="column"
     >
-      <Spacer y={1}/>
+      <Spacer y={1} />
       <Text h2 css={{ color: "white" }}>
         Kontakt
       </Text>
@@ -34,12 +34,7 @@ const Contact = () => {
         </Grid>
         <Grid.Container xs={12} sm={6} direction="column" gap={2}>
           <Grid xs={12}>
-            <Input
-              type={"text"}
-              label="Imie"
-              width="100%"
-              clearable
-            />
+            <Input type={"text"} label="Imie" width="100%" clearable />
           </Grid>
           <Grid>
             <Input type={"date"} label="Data ślubu" size="md" width="100%" />
@@ -57,7 +52,15 @@ const Contact = () => {
               defaultChecked={false}
               onChange={() => setIsChecked(!isChecked)}
             >
-              Zaakceptuj
+              <Text small>
+                Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z ustawą
+                o ochronie danych osobowych w związku z wysłaniem zapytania
+                przez formularz kontaktowy. Podanie danych jest dobrowolne, ale
+                niezbędne do przetworzenia zapytania. Zostałem poinformowany, że
+                przysługuje mi prawo dostępu do swoich danych, możliwości ich
+                poprawienia, żądania zaprzestania ich przetwarzania.
+                Administratorem danych jest firma Nowak
+              </Text>
             </Checkbox>
           </Grid>
           <Spacer y={1} />

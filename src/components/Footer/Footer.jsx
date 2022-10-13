@@ -1,4 +1,4 @@
-import { Container, Grid } from "@nextui-org/react";
+import { Container, Grid, Text } from "@nextui-org/react";
 import FooterGridElement from "../NextUi/FooterGridElement";
 
 const Footer = () => {
@@ -6,7 +6,8 @@ const Footer = () => {
     <footer
       style={{
         minHeight: "60px",
-        backgroundColor: "black",
+        background: "(0, 0, 0, 0.6)",
+        backdropFilter: "saturate(180%) blur(10px)",
         display: "flex",
         alignItems: "center",
       }}
@@ -27,6 +28,8 @@ const Footer = () => {
             SOCIALE
           </FooterGridElement>
         </Grid.Container>
+        <Text>Polityka Prywatnosci</Text>
+        <Text small>Created by Filip Sojecki</Text>
       </Container>
     </footer>
   );
