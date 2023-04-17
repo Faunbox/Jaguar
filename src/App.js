@@ -1,10 +1,11 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import Footer from "./components/Footer/Footer";
 import Navigarion from "./components/Navbar/Navigation";
-import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import HeroSecrion from "./pages/Hero/Hero";
 import Offert from "./pages/Offert/Offert";
+
+const Contact = lazy(() => import("./pages/Contact/Contact"));
 
 function App() {
   return (

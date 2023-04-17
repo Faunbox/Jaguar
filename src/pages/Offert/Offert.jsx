@@ -3,6 +3,7 @@ import { Container, Grid, Image, Spacer, Text } from "@nextui-org/react";
 const Offert = () => {
   return (
     <Container
+      id="oferta"
       justify="center"
       alignItems="center"
       css={{ textAlign: "center" }}
@@ -11,7 +12,7 @@ const Offert = () => {
       <Text h2>Oferta</Text>
       <Grid.Container gap={1}>
         <Grid xs={12} sm={5}>
-          <Image src="/images/fura.jpg" css={{ borderRadius: "15px" }} />
+          <Image src="/images/jazda.jpg" css={{ borderRadius: "15px" }} />
         </Grid>
         <Grid xs={12} sm={7} alignItems="center">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis quos

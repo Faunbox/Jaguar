@@ -3,8 +3,10 @@ import {
   Container,
   Grid,
   Input,
+  Row,
   Spacer,
   Text,
+  Textarea,
 } from "@nextui-org/react";
 import { useState } from "react";
 import StyledButton from "../../components/NextUi/ColoredButton";
@@ -13,6 +15,7 @@ const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <Container
+      id="kontakt"
       display="flex"
       justify="center"
       alignItems="center"
@@ -32,17 +35,48 @@ const Contact = () => {
             quaerat quibusdam eaque rerum molestias modi ut.
           </Text>
         </Grid>
-        <Grid.Container xs={12} sm={6} direction="column" gap={2}>
+        <Grid.Container
+          xs={12}
+          sm={6}
+          direction="column"
+          gap={2}
+          as="form"
+          action="https://formsubmit.co/faunbox2@gmail.com"
+          method="POST"
+        >
           <Grid xs={12}>
-            <Input type={"text"} label="Imie" width="100%" clearable />
+            <Input
+              type={"text"}
+              label="Imie"
+              name="Imie"
+              width="100%"
+              clearable
+            />
           </Grid>
           <Grid>
-            <Input type={"date"} label="Data ślubu" size="md" width="100%" />
+            <Row justify="space-between">
+              <Input
+                type={"date"}
+                label="Data ślubu"
+                name="Data"
+                size="md"
+                width="100%"
+              />
+              <Spacer y={1} />
+              <Input
+                type={"number"}
+                label="Numer kontaktowy"
+                name="Numer kontaktowy"
+                size="md"
+                width="100%"
+              />
+            </Row>
           </Grid>
           <Grid>
-            <Input.Textarea
+            <Textarea
               minRows={5}
               label="Wiadomość"
+              name="Wiadomość"
               width={"100%"}
               minLength={5}
             />
@@ -62,6 +96,7 @@ const Contact = () => {
                 Administratorem danych jest firma Nowak
               </Text>
             </Checkbox>
+            <input type="text" name="_honey" style={{ display: "none" }} />
           </Grid>
           <Spacer y={1} />
           {isChecked ? (

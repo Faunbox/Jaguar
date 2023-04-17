@@ -1,6 +1,9 @@
 import { Link, Navbar, Text } from "@nextui-org/react";
+import { useRef } from "react";
 
 const Navigarion = () => {
+  const ref = useRef();
+
   const menuOptions = [
     { text: "Strona główna", href: "#" },
     { text: "Oferta", href: "#oferta" },
@@ -24,7 +27,18 @@ const Navigarion = () => {
       >
         {menuOptions.map((item) => {
           return (
-            <Navbar.Link href={item.href} key={item.text}>
+            <Navbar.Link
+              href={item.href}
+              key={item.text}
+              className={item.href}
+              ref={ref}
+              onClick={(e) => {
+                window.scrollTo({
+                  behavior: "smooth",
+                  top: item.href.offsetTop,
+                });
+              }}
+            >
               {item.text}
             </Navbar.Link>
           );
@@ -33,14 +47,13 @@ const Navigarion = () => {
       <Navbar.Collapse>
         {menuOptions.map((item) => {
           return (
-            <Navbar.CollapseItem key={item.href+item.text}>
+            <Navbar.CollapseItem key={item.href + item.text}>
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
                 href={item.href}
-                
               >
                 {item.text}
               </Link>

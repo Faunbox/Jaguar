@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import {createRoot} from 'react-dom/client';
 import "./index.css";
 import App from "./App";
 import { NextUIProvider, createTheme } from "@nextui-org/react";
@@ -8,11 +8,12 @@ const darkTheme = createTheme({
   type: "dark",
 });
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-      <NextUIProvider theme={darkTheme}>
-        <App />
-      </NextUIProvider>
-  </React.StrictMode>
+  <StrictMode>
+    <NextUIProvider theme={darkTheme}>
+      <App />
+    </NextUIProvider>
+  </StrictMode>
 );
