@@ -35,9 +35,9 @@ const Footer = () => {
                 </Link>
               </Text>
               <Text>
-                <Link href="mailto:kontakt@remonty-nowak.pl" color={"inherit"}>
+                <Link href="mailto:kontakt@jaguarnaslub.pl" color={"inherit"}>
                   <MdLocalPostOffice size={19} style={{ marginRight: "5px" }} />
-                  Email: kontakt@remonty-nowak.pl
+                  Email: kontakt@jaguarnaslub.pl
                 </Link>
               </Text>
             </Col>

@@ -1,4 +1,4 @@
-import { Container, Link, Text } from "@nextui-org/react";
+import { Container, Link, Spacer, Text } from "@nextui-org/react";
 import StyledButton from "../../components/NextUi/ColoredButton";
 
 const HeroSecrion = () => {
@@ -9,16 +9,25 @@ const HeroSecrion = () => {
       justify="center"
       alignItems="center"
     >
-      <Text h2 color="white">
+      <Text h1 color="white">
         Wyjątkowy samochód na wyjątkową chwilę
       </Text>
-      <Text h3 color="white ">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-        veritatis cupiditate ullam neque iusto aut et quaerat illum distinctio
-        eveniet fuga itaque, recusandae aperiam nesciunt! Exercitationem hic a
-        nulla beatae earum harum atque reiciendis corrupti sed, quaerat quidem
-        modi soluta.
+      <Text
+        h3
+        css={{
+          textGradient: "45deg, #FFF8DC -10%, white 60%",
+          backdropFilter: "blur(15px)",
+        }}
+      >
+        Jeśli jesteś wielbicielem klasycznego stylu i kunsztu motoryzacji oraz
+        szukasz czegoś co dopełni piękna młodej pary w najważniejszym i
+        najwspanialszym dniu waszego życia to dobrze trafiłeś. Oferuję najem
+        wraz z szoferem niepowtarzalnej brytyjskiej limuzyny jaką jest Jaguar
+        Daimler XJ6 w wersji Long. Pod maską drzemie ponad cztero litrowe
+        brytyjskie monstrum zasilanie gaźnikami, niech jego dźwięk doprawi wasz
+        wspaniały dzień.
       </Text>
+      <Spacer y={1} />
       <Link href="#kontakt" color={"inherit"}>
         <StyledButton
           ghost

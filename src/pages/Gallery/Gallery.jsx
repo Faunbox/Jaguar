@@ -23,13 +23,14 @@ const Gallery = () => {
       <Text h2>Galeria</Text>
       <Grid.Container gap={2}>
         {imageGallery.map((image) => (
-          <Grid xs={6} sm={3} md={3} key={image}>
+          <Grid xs={12} sm={3} md={3} key={image}>
             <Image
               src={image}
               showSkeleton
               objectFit="cover"
               width={300}
               height={300}
+              lazy={true}
               onClick={() => setIsOpen(true)}
               css={{ borderRadius: "5px", cursor: "pointer" }}
             />
