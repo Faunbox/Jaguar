@@ -1,9 +1,11 @@
 import {
   Card,
   Checkbox,
+  Col,
   Container,
   Grid,
   Input,
+  Link,
   Row,
   Spacer,
   Text,
@@ -11,6 +13,8 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import StyledButton from "../../components/NextUi/ColoredButton";
+import { GiRotaryPhone } from "react-icons/gi";
+import { MdLocalPostOffice } from "react-icons/md";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -44,6 +48,32 @@ const Contact = () => {
           <Text h3 css={{ color: "white" }} weight={"bold"}>
             Masz jakieś pytania? Zapraszamy do kontaktu!
           </Text>
+          <Col>
+            <Container
+              justify="center"
+              alignItems="center"
+              css={{ textAlign: "center" }}
+            >
+              <Text
+                size={25}
+                css={{ textGradient: "45deg, #a9a69b -10%, white 60%" }}
+              >
+                <Link href="tel:+48512700684" color={"inherit"}>
+                  <GiRotaryPhone style={{ margin: "5px" }} />
+                  Telefon: +48 512 700 684
+                </Link>
+              </Text>
+              <Text
+                size={25}
+                css={{ textGradient: "45deg, #a9a69b -10%, white 60%" }}
+              >
+                <Link href="mailto:kontakt@jaguarnaslub.pl" color={"inherit"}>
+                  <MdLocalPostOffice style={{ margin: "5px" }} />
+                  Email: kontakt@jaguarnaslub.pl
+                </Link>
+              </Text>
+            </Container>
+          </Col>
         </Grid>
 
         <Grid.Container

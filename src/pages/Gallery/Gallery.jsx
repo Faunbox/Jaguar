@@ -8,9 +8,21 @@ const Gallery = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const imageGallery = [
-    "/images/front.jpg",
-    "/images/sala.jpg",
-    "/images/tyl_park.jpg",
+    {
+      src: "/images/przod-420.webp",
+      w960: "/images/przod-960.webp",
+      w1440: "/images/przod-1440-1080.webp",
+    },
+    {
+      src: "/images/bok-420.webp",
+      w960: "/images/bok-960.webp",
+      w1440: "/images/bok-1440-960.webp",
+    },
+    {
+      src: "/images/tyl-420.webp",
+      w960: "/images/tyl-960.webp",
+      w1440: "/images/tyl-1333-640.webp",
+    },
   ];
 
   return (
@@ -23,14 +35,17 @@ const Gallery = () => {
       <Text h2>Galeria</Text>
       <Grid.Container gap={2}>
         {imageGallery.map((image) => (
-          <Grid xs={12} sm={3} md={3} key={image}>
+          <Grid xs={12} sm={3} md={3} key={image.src}>
             <Image
-              src={image}
+              src={image.src}
               showSkeleton
               objectFit="cover"
               width={300}
+              srcSet={`${image.src} 360w,
+              ${image.w960} 850w, 
+              ${image.w1440} 1200w`}
               height={300}
-              lazy={true}
+              loading="lazy"
               onClick={() => setIsOpen(true)}
               css={{ borderRadius: "5px", cursor: "pointer" }}
             />
@@ -38,27 +53,29 @@ const Gallery = () => {
         ))}
       </Grid.Container>
 
-      {isOpen && (
-        <Lightbox
-          mainSrc={imageGallery[photoIndex]}
-          nextSrc={imageGallery[(photoIndex + 1) % imageGallery.length]}
-          prevSrc={
-            imageGallery[
-              (photoIndex + imageGallery.length - 1) % imageGallery.length
-            ]
-          }
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex(
-              (photoIndex + imageGallery.length - 1) % imageGallery.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % imageGallery.length)
-          }
-          // clickOutsideToClose={true}
-        />
-      )}
+      {isOpen &&
+        (console.log(imageGallery[1].w1440),
+        (
+          <Lightbox
+            mainSrc={imageGallery[photoIndex].w1440}
+            nextSrc={imageGallery[(photoIndex + 1) % imageGallery.length]}
+            prevSrc={
+              imageGallery[
+                (photoIndex + imageGallery.length - 1) % imageGallery.length
+              ]
+            }
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex(
+                (photoIndex + imageGallery.length - 1) % imageGallery.length
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % imageGallery.length)
+            }
+            clickOutsideToClose={true}
+          />
+        ))}
     </Container>
   );
 };

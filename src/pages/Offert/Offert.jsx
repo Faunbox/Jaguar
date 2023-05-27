@@ -12,7 +12,7 @@ const Offert = () => {
       <Text h2>Oferta</Text>
       <Grid.Container gap={1}>
         <Grid xs={12} sm={5}>
-          <Image src="/images/jazda.jpg" css={{ borderRadius: "15px" }} />
+          <Image src="/images/jazda.webp" css={{ borderRadius: "15px" }} />
         </Grid>
         <Grid xs={12} sm={7} alignItems="center" direction="column">
           <Text size={"$lg"}>

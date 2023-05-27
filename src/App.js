@@ -2,13 +2,18 @@ import { Suspense, lazy } from "react";
 import Footer from "./components/Footer/Footer";
 import Navigarion from "./components/Navbar/Navigation";
 import HeroSecrion from "./pages/Hero/Hero";
-import Offert from "./pages/Offert/Offert";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { Helmet } from "react-helmet-async";
+import { firebaseConfig } from "./lib/firebase";
 
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Gallery = lazy(() => import("./pages/Gallery/Gallery"));
+const Offert = lazy(() => import("./pages/Offert/Offert"));
 
 function App() {
+  const app = initializeApp(firebaseConfig);
+  getAnalytics(app);
   return (
     <>
       <Helmet prioritizeSeoTags>
@@ -25,13 +30,13 @@ function App() {
         <meta name="author" content="Filip Sojecki" />
       </Helmet>
       <Navigarion />
-      <Suspense fallback={<div>Ładowanie...</div>} />
       <HeroSecrion />
-      <Offert />
-      <Gallery />
-      <Contact />
-      <Suspense />
-      <Footer />
+      <Suspense fallback={<div>Ładowanie...</div>}>
+        <Offert />
+        <Gallery />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
   );
 }
