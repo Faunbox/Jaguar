@@ -9,19 +9,59 @@ const Gallery = () => {
 
   const imageGallery = [
     {
-      src: "/images/przod-420.webp",
-      w960: "/images/przod-960.webp",
-      w1440: "/images/przod-1440-1080.webp",
+      src: "/images/1.jpg",
+      w960: "/images/1-960.jpg",
+      w1440: "/images/1-1800.jpg",
     },
     {
-      src: "/images/bok-420.webp",
-      w960: "/images/bok-960.webp",
-      w1440: "/images/bok-1440-960.webp",
+      src: "/images/2.jpg",
+      w960: "/images/2-960.jpg",
+      w1440: "/images/2 -1800.jpg",
     },
     {
-      src: "/images/tyl-420.webp",
-      w960: "/images/tyl-960.webp",
-      w1440: "/images/tyl-1333-640.webp",
+      src: "/images/3.jpg",
+      w960: "/images/3-960.jpg",
+      w1440: "/images/3 -1800.jpg",
+    },
+    {
+      src: "/images/4.jpg",
+      w960: "/images/4-960.jpg",
+      w1440: "/images/4 -1800.jpg",
+    },
+    {
+      src: "/images/5.jpg",
+      w960: "/images/5-960.jpg",
+      w1440: "/images/5 -1800.jpg",
+    },
+    {
+      src: "/images/6.jpg",
+      w960: "/images/6-960.jpg",
+      w1440: "/images/6 -1800.jpg",
+    },
+    {
+      src: "/images/7.jpg",
+      w960: "/images/7-960.jpg",
+      w1440: "/images/7 -1800.jpg",
+    },
+    {
+      src: "/images/8.jpg",
+      w960: "/images/8-960.jpg",
+      w1440: "/images/8 -1800.jpg",
+    },
+    {
+      src: "/images/9.jpg",
+      w960: "/images/9-960.jpg",
+      w1440: "/images/9 -1800.jpg",
+    },
+    {
+      src: "/images/10.jpg",
+      w960: "/images/10-960.jpg",
+      w1440: "/images/10 -1800.jpg",
+    },
+    {
+      src: "/images/11.jpg",
+      w960: "/images/11-960.jpg",
+      w1440: "/images/11 -1800.jpg",
     },
   ];
 
@@ -34,7 +74,7 @@ const Gallery = () => {
     >
       <Text h2>Galeria</Text>
       <Grid.Container gap={2}>
-        {imageGallery.map((image) => (
+        {imageGallery.map((image, id) => (
           <Grid xs={12} sm={3} md={3} key={image.src}>
             <Image
               src={image.src}
@@ -46,7 +86,7 @@ const Gallery = () => {
               ${image.w1440} 1200w`}
               height={300}
               loading="lazy"
-              onClick={() => setIsOpen(true)}
+              onClick={() => (setIsOpen(true), setPhotoIndex(id))}
               css={{ borderRadius: "5px", cursor: "pointer" }}
             />
           </Grid>

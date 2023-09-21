@@ -12,7 +12,7 @@ const Offert = () => {
       <Text h2>Oferta</Text>
       <Grid.Container gap={1}>
         <Grid xs={12} sm={5}>
-          <Image src="/images/jazda.webp" css={{ borderRadius: "15px" }} />
+          <Image src="/images/jazda.jpg" css={{ borderRadius: "15px" }} />
         </Grid>
         <Grid xs={12} sm={7} alignItems="center" direction="column">
           <Text size={"$lg"}>
@@ -41,11 +41,9 @@ const Offert = () => {
           <Text>
             Z racji że samochód ma prawie pięćdziesiąt lat i niski przebieg co
             czyni go jeszcze atrakcyjniejszym teren który obejmuję usługa jest
-            zawężony do promienia 20 kilometrów od miejscowości Żywiec, jednak
+            zawężony do promienia 50 kilometrów od miejscowości Żywiec, jednak
             jeśli jesteś z daleka a naprawdę pragniecie by ten samochód był
-            waszym pojazdem ślubnym możemy uzgodnić wcześniej warunki przewozu,
-            na miejsce mogę zabrać Jaguara laweta co niestety podniesie znacząco
-            cenę usługi.
+            waszym pojazdem ślubnym możemy uzgodnić wcześniej warunki przewozu.
           </Text>
         </Grid>
       </Grid.Container>

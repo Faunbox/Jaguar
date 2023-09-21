@@ -3,7 +3,7 @@ import FooterGridElement from "../NextUi/FooterGridElement";
 import PrivactPolitics from "../Others/PrivacyPolitics";
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdLocalPostOffice } from "react-icons/md";
-import { FaFacebookSquare, FaInstagram, FaPinterest } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -44,8 +44,21 @@ const Footer = () => {
           </FooterGridElement>
           <FooterGridElement xs={12} sm={4} justify="center">
             <Row justify="space-around">
-              <FaPinterest />
-              <FaFacebookSquare />
+              <a
+                href="https://www.tiktok.com/@jaguarxj6l"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTiktok />
+              </a>
+              <a
+                href="https://www.facebook.com/people/Jaguar-na-%C5%9Alub/61551434428764/?mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookSquare />
+              </a>
+
               <FaInstagram />
             </Row>
           </FooterGridElement>
